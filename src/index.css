@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Jharkhand Tourism Design System - Earth tones and cultural colors */
+
+@layer base {
+  :root {
+    /* Base colors inspired by Jharkhand's nature */
+    --background: 45 20% 98%;
+    --foreground: 25 15% 15%;
+
+    /* Card colors with warm earth tones */
+    --card: 0 0% 100%;
+    --card-foreground: 25 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 15% 15%;
+
+    /* Primary - Forest green inspired by Jharkhand's forests */
+    --primary: 140 45% 25%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary - Earthy brown inspired by tribal culture */
+    --secondary: 25 35% 85%;
+    --secondary-foreground: 25 15% 15%;
+
+    /* Muted earth tones */
+    --muted: 40 20% 92%;
+    --muted-foreground: 25 8% 45%;
+
+    /* Accent - Warm orange inspired by cultural festivals */
+    --accent: 25 75% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Eco green variant */
+    --eco: 120 40% 35%;
+    --eco-foreground: 0 0% 98%;
+
+    /* Cultural variant - Rich red inspired by tribal art */
+    --cultural: 15 70% 45%;
+    --cultural-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 25% 88%;
+    --input: 40 25% 88%;
+    --ring: 140 45% 25%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients for tourism theme */
+    --gradient-hero: linear-gradient(135deg, hsl(140 45% 25%), hsl(120 40% 35%));
+    --gradient-eco: linear-gradient(120deg, hsl(120 40% 35%), hsl(140 45% 25%));
+    --gradient-cultural: linear-gradient(45deg, hsl(15 70% 45%), hsl(25 75% 60%));
+    --gradient-sunset: linear-gradient(180deg, hsl(25 75% 60%), hsl(15 70% 45%));
+
+    /* Shadows with natural feel */
+    --shadow-eco: 0 10px 30px -5px hsl(140 45% 25% / 0.3);
+    --shadow-cultural: 0 10px 30px -5px hsl(15 70% 45% / 0.3);
+    --shadow-soft: 0 4px 20px -2px hsl(25 15% 15% / 0.1);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode colors inspired by night forests and cultural warmth */
+    --background: 25 15% 8%;
+    --foreground: 45 20% 95%;
+
+    --card: 25 15% 10%;
+    --card-foreground: 45 20% 95%;
+
+    --popover: 25 15% 10%;
+    --popover-foreground: 45 20% 95%;
+
+    --primary: 140 45% 35%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 25 25% 18%;
+    --secondary-foreground: 45 20% 95%;
+
+    --muted: 25 20% 15%;
+    --muted-foreground: 45 10% 65%;
+
+    --accent: 25 65% 55%;
+    --accent-foreground: 0 0% 98%;
+
+    --eco: 120 40% 45%;
+    --eco-foreground: 0 0% 98%;
+
+    --cultural: 15 70% 55%;
+    --cultural-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 20% 20%;
+    --input: 25 20% 20%;
+    --ring: 140 45% 35%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom scroll bar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-eco {
+    background: var(--gradient-eco);
+  }
+  
+  .gradient-cultural {
+    background: var(--gradient-cultural);
+  }
+  
+  .gradient-sunset {
+    background: var(--gradient-sunset);
+  }
+  
+  .shadow-eco {
+    box-shadow: var(--shadow-eco);
+  }
+  
+  .shadow-cultural {
+    box-shadow: var(--shadow-cultural);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-spring {
+    transition: var(--transition-spring);
+  }
+}
