@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import DestinationExplorer from "@/components/DestinationExplorer";
+import InteractiveMap from "@/components/InteractiveMap";
+import ARVRPreview from "@/components/ARVRPreview";
 import LocalMarketplace from "@/components/LocalMarketplace";
 import EventCalendar from "@/components/EventCalendar";
 import ItineraryPlanner from "@/components/ItineraryPlanner";
@@ -21,6 +23,12 @@ const Index = () => {
 
       {/* Destination Explorer */}
       <DestinationExplorer />
+
+      {/* Interactive Map */}
+      <InteractiveMap />
+
+      {/* AR/VR Preview */}
+      <ARVRPreview />
 
       {/* Local Marketplace */}
       <LocalMarketplace />
