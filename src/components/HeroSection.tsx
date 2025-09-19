@@ -40,9 +40,11 @@ const HeroSection = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-4">
-              <Calendar className="h-5 w-5" />
-              Plan Your Journey
+            <Button variant="hero" size="lg" className="text-lg px-8 py-4" asChild>
+              <a href="#itinerary">
+                <Calendar className="h-5 w-5" />
+                Plan Your Journey
+              </a>
             </Button>
             <Button variant="outline" size="lg" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 text-lg px-8 py-4">
               <Play className="h-5 w-5" />

@@ -3,6 +3,8 @@ import HeroSection from "@/components/HeroSection";
 import DestinationExplorer from "@/components/DestinationExplorer";
 import LocalMarketplace from "@/components/LocalMarketplace";
 import EventCalendar from "@/components/EventCalendar";
+import ItineraryPlanner from "@/components/ItineraryPlanner";
+import ChatBot from "@/components/ChatBot";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -25,6 +27,9 @@ const Index = () => {
 
       {/* Event Calendar */}
       <EventCalendar />
+
+      {/* AI Itinerary Planner */}
+      <ItineraryPlanner />
 
       {/* Why Choose Us */}
       <section className="py-20 bg-background">
@@ -151,6 +156,9 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* Multilingual ChatBot */}
+      <ChatBot />
     </div>
   );
 };

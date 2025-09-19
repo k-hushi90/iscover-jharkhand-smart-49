@@ -1,1 +1,7 @@
 project_id = "qicanpsrzzqbpzdxkgwr"
+
+[functions.itinerary-planner]
+verify_jwt = false
+
+[functions.multilingual-chatbot]
+verify_jwt = false
